@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=Archivo:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}
+a{color:#0044a4}a:hover{color:#00307a}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}
+.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}
+.dv-opts{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)}
+.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}
+.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}
+.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+@keyframes em-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes em-marquee-rev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+</style>
+</helmet>
+<section class="dv-turn" id="t1" data-screen-label="Turn 1 — three directions">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Campaign direction (1c) — final candidate.</span></div>
+<div class="dv-opts">
+
+<!-- ============ OPTION 1C — CAMPAIGN POSTER ============ -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Campaign poster — loud activist energy, big type, blue/yellow blocks</div>
+<div class="dv-card" style="width:1120px;background:#00275e;color:#fff;font-family:'Archivo',sans-serif" data-screen-label="1c Campaign poster">
+
+  <div style="padding:80px 44px 0;text-align:center;background:#0044a4">
+    <img src="assets/eth-diamond.png" alt="" style="width:110px;display:block;margin:0 auto">
+    <h1 style="font:900 100px/.94 'Archivo',sans-serif;margin:26px 0 0;letter-spacing:-.025em"><span style="position:relative;display:inline-block;padding:0 26px;color:#14161f;transform:rotate(-2.5deg);line-height:1.1"><span style="position:absolute;inset:2px -10px;background:#fde12d"></span><span style="position:relative">Encrypt</span></span><br>the Mempool!</h1>
+    <p style="font:500 20px/1.5 'Archivo',sans-serif;color:rgba(255,255,255,.9);max-width:52ch;margin:26px auto 0;text-wrap:pretty">Join the coalition to protect the Ethereum community against <span style="white-space:nowrap">front running</span>, sandwich attacks, and real-time censorship.</p>
+    <div style="display:flex;justify-content:center;gap:14px;margin:34px 0 0">
+      <a href="#1c" style="background:#fde12d;color:#14161f;padding:16px 32px;font:800 16px 'Archivo',sans-serif;text-decoration:none">JOIN THE EFFORT</a>
+      <a href="#1c" style="border:2px solid #fff;color:#fff;padding:16px 32px;font:800 16px 'Archivo',sans-serif;text-decoration:none">WTF IS AN ENCRYPTED MEMPOOL?</a>
+    </div>
+    <div style="margin-top:64px;border-top:1px solid rgba(255,255,255,.25);padding:14px 0;overflow:hidden">
+      <div style="display:flex;width:max-content;animation:em-marquee 60s linear infinite;font:600 13px 'IBM Plex Mono',monospace;color:rgba(255,255,255,.65)">
+        <sc-for list="{{ members }}" as="m" hint-placeholder-count="23"><span style="padding:0 18px;border-right:1px solid rgba(255,255,255,.25);white-space:nowrap">{{ m.n }}</span></sc-for>
+        <sc-for list="{{ members }}" as="m"><span style="padding:0 18px;border-right:1px solid rgba(255,255,255,.25);white-space:nowrap">{{ m.n }}</span></sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;color:#14161f;padding:72px 44px">
+    <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:56px">
+      <div style="font:800 40px/1.1 'Archivo',sans-serif;text-transform:uppercase">Every Ethereum user has <span>felt this.</span></div>
+      <div style="font-size:17px;line-height:1.65;color:#33363f">
+        <p style="margin:0 0 16px">You submit a trade. You click mint. You hit send. Moments later, you get a worse price, miss the NFT, or watch your transaction stall.</p>
+        <p style="margin:0 0 16px">This is not a wallet problem, not a DEX problem, not a user mistake. It's how Ethereum handles transactions by default. Before a transaction is confirmed, it sits visible in the public mempool. Bots, builders, and others can see your intent and use that visibility to extract value from you with front running and sandwich attacks.</p>
+        <p style="margin:0 0 16px"><strong>An encrypted mempool on Ethereum would change this.</strong> It would let you send encrypted transactions that stay hidden from everyone until your transaction is locked in by the chain. This removes the visibility that fuels front running, sandwich attacks, and real-time censorship, while preserving decentralization and credible neutrality.</p>
+        <p style="margin:0">We've come together to rally support to Encrypt the Mempool! in Ethereum's upcoming I* hardfork.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#0044a4;padding:72px 44px">
+    <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 40px;text-align:center;color:#fff">The Human Cost of Toxic MEV :(</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <sc-for list="{{ evidence }}" as="ev" hint-placeholder-count="5">
+        <div style="border:2px solid #191919;background:#fff;color:#14161f;display:flex;flex-direction:column">
+          <div style="padding:16px 18px;font:700 16px/1.35 'Archivo',sans-serif;border-bottom:2px solid #191919;min-height:44px;display:flex;align-items:center">{{ ev.t }}</div>
+          <div style="flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:12px">
+            <img src="{{ ev.img }}" alt="{{ ev.t }}" style="max-width:100%;max-height:260px;display:block">
+          </div>
+        </div>
+      </sc-for>
+      <div style="border:2px dashed rgba(255,255,255,.45);display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font:500 13px/1.6 'IBM Plex Mono',monospace;color:rgba(255,255,255,.85)">$1.8B+ drained from Ethereum users through MEV since 2020 — much of it via front running and sandwich attacks</div>
+    </div>
+  </div>
+
+  <div style="background:#f2f2f0;color:#14161f;padding:72px 44px;text-align:center">
+    <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 36px">WTF is an Encrypted Mempool?</h2>
+    <div style="max-width:860px;margin:0 auto;border:3px solid #14161f;aspect-ratio:16/9;background:#14161f">
+      <iframe src="https://www.youtube.com/embed/KTsLMTqux1s" title="WTF is an Encrypted Mempool?" style="width:100%;height:100%;display:block;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="true"></iframe>
+    </div>
+
+  </div>
+
+  <div style="background:#fff;color:#14161f;padding:72px 44px">
+    <h2 style="font:800 40px/1.1 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 40px;max-width:24ch">7 Reasons Why Ethereum Needs an <span>Encrypted Mempool</span></h2>
+    <div style="display:flex;flex-direction:column;gap:0;border-top:3px solid #14161f">
+      <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="7">
+        <div style="border-bottom:3px solid #14161f">
+          <div onClick="{{ r.toggle }}" style="display:grid;grid-template-columns:110px 1fr 60px;align-items:center;padding:20px 0;cursor:pointer">
+            <span style="font:900 44px 'Archivo',sans-serif;color:#0044a4">{{ r.n }}</span>
+            <span style="font:800 24px 'Archivo',sans-serif;text-transform:uppercase">{{ r.t }}</span>
+            <span style="font:600 34px 'Archivo',sans-serif;text-align:center;color:#0044a4">{{ r.sym }}</span>
+          </div>
+          <sc-if value="{{ r.open }}" hint-placeholder-val="{{ false }}">
+            <div style="padding:0 60px 26px 110px;font:400 17px/1.65 'Archivo',sans-serif;color:#33363f;max-width:76ch;white-space:pre-line">{{ r.d }}</div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="background:#0044a4;padding:72px 44px">
+    <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 36px;text-align:center">I'm in! How Can I Support?</h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <div style="background:#fff;color:#14161f;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:800 20px 'Archivo',sans-serif;text-transform:uppercase">1 · Join 🛠 Tech Working Group</div>
+        <div style="font-size:14px;line-height:1.55;color:#33363f">Open to those wanting to support encrypting mempool development</div>
+        <div style="font:600 12px 'IBM Plex Mono',monospace;color:#0044a4">Next meeting: Wed, 22 July 15:00 UTC</div>
+        <a href="https://github.com/shutter-network/encrypted-mempool-pm/issues/13" style="margin-top:auto;background:#fde12d;color:#14161f;text-align:center;padding:13px;font:800 13px 'Archivo',sans-serif;text-decoration:none">ADD MEETING TO CALENDAR</a>
+      </div>
+      <div style="background:#fff;color:#14161f;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:800 20px 'Archivo',sans-serif;text-transform:uppercase">2 · Join 🚀 Business/Marcomms Working Group</div>
+        <div style="font-size:14px;line-height:1.55;color:#33363f">Focused on education, stakeholder outreach, partnerships</div>
+        <div style="font:600 12px 'IBM Plex Mono',monospace;color:#0044a4">Next meeting: Wed, 29 July 15:00 UTC</div>
+        <a href="https://github.com/shutter-network/encrypted-mempool-pm/issues/13" style="margin-top:auto;background:#fde12d;color:#14161f;text-align:center;padding:13px;font:800 13px 'Archivo',sans-serif;text-decoration:none">ADD MEETING TO CALENDAR</a>
+      </div>
+      <div style="background:#fff;color:#14161f;padding:28px;display:flex;flex-direction:column;gap:12px">
+        <div style="font:800 20px 'Archivo',sans-serif;text-transform:uppercase">3 · Love this? Share it!</div>
+        <div style="font-size:14px;line-height:1.55;color:#33363f">A post will be pre-generated, which you can edit. Tag your favorite wallet and DEX and tell them to adopt!</div>
+        <a href="{{ shareX }}" style="margin-top:auto;background:#fde12d;color:#14161f;text-align:center;padding:13px;font:800 13px 'Archivo',sans-serif;text-decoration:none">POST ON X/TWITTER</a>
+        <a href="{{ shareFc }}" style="background:#fde12d;color:#14161f;text-align:center;padding:13px;font:800 13px 'Archivo',sans-serif;text-decoration:none">POST ON FARCASTER</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;color:#14161f;padding:72px 44px">
+    <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 36px;text-align:center">Coalition <span>Members</span></h2>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:900px;margin:0 auto">
+      <sc-for list="{{ members }}" as="m" hint-placeholder-count="23">
+        <a href="{{ m.u }}" title="{{ m.n }}" style="display:block;aspect-ratio:1;text-decoration:none"><img src="{{ m.img }}" alt="{{ m.n }}" style="width:100%;height:100%;object-fit:cover;display:block"></a>
+      </sc-for>
+      <div style="aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:#0044a4;color:#fff;font:700 14px 'Archivo',sans-serif;text-align:center;padding:12px">Your org here → Join us</div>
+    </div>
+    <div style="max-width:980px;margin:56px auto 0">
+      <div style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin-bottom:24px;text-align:center">Contributors &amp; Supporters</div>
+      <div style="columns:3;column-gap:36px">
+        <sc-for list="{{ contributors }}" as="c" hint-placeholder-count="50">
+          <div style="break-inside:avoid;padding:5px 0;font:500 13px/1.5 'Archivo',sans-serif"><a href="{{ c.u }}" style="color:#14161f;font-weight:700;text-decoration:none">{{ c.n }}</a> <span style="color:#787d89">{{ c.d }}{{ c.o }}</span></div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="margin-top:64px;overflow:hidden">
+      <div style="display:flex;width:max-content;animation:em-marquee 70s linear infinite;align-items:flex-start">
+        <sc-for list="{{ xpostsA }}" as="p" hint-placeholder-count="13">
+          <a href="{{ p.u }}" title="Post by {{ p.author }}" style="display:flex;flex-direction:column;width:380px;height:560px;box-sizing:border-box;margin-right:20px;border:2px solid #14161f;background:#fff;text-decoration:none;color:#14161f;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <img src="{{ p.av }}" alt="" style="width:38px;height:38px;border-radius:50%;display:block">
+              <div>
+                <div style="font:800 13.5px 'Archivo',sans-serif">{{ p.author }}</div>
+                <div style="font:500 11px 'IBM Plex Mono',monospace;color:#75756e">@{{ p.handle }}</div>
+              </div>
+              <span style="margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:#0044a4;white-space:nowrap">View on X ↗</span>
+            </div>
+            <div style="font:400 13.5px/1.5 'Archivo',sans-serif;margin-top:12px;white-space:pre-line">{{ p.text }}</div>
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}"><div style="flex:1;min-height:0;margin-top:12px;display:flex"><img src="{{ p.img }}" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block"></div></sc-if>
+          </a>
+        </sc-for>
+        <sc-for list="{{ xpostsA }}" as="p">
+          <a href="{{ p.u }}" title="Post by {{ p.author }}" style="display:flex;flex-direction:column;width:380px;height:560px;box-sizing:border-box;margin-right:20px;border:2px solid #14161f;background:#fff;text-decoration:none;color:#14161f;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <img src="{{ p.av }}" alt="" style="width:38px;height:38px;border-radius:50%;display:block">
+              <div>
+                <div style="font:800 13.5px 'Archivo',sans-serif">{{ p.author }}</div>
+                <div style="font:500 11px 'IBM Plex Mono',monospace;color:#75756e">@{{ p.handle }}</div>
+              </div>
+              <span style="margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:#0044a4;white-space:nowrap">View on X ↗</span>
+            </div>
+            <div style="font:400 13.5px/1.5 'Archivo',sans-serif;margin-top:12px;white-space:pre-line">{{ p.text }}</div>
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}"><div style="flex:1;min-height:0;margin-top:12px;display:flex"><img src="{{ p.img }}" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block"></div></sc-if>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+    <div style="margin-top:24px;overflow:hidden">
+      <div style="display:flex;width:max-content;animation:em-marquee-rev 70s linear infinite;align-items:flex-start">
+        <sc-for list="{{ xpostsB }}" as="p" hint-placeholder-count="13">
+          <a href="{{ p.u }}" title="Post by {{ p.author }}" style="display:flex;flex-direction:column;width:380px;height:560px;box-sizing:border-box;margin-right:20px;border:2px solid #14161f;background:#fff;text-decoration:none;color:#14161f;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <img src="{{ p.av }}" alt="" style="width:38px;height:38px;border-radius:50%;display:block">
+              <div>
+                <div style="font:800 13.5px 'Archivo',sans-serif">{{ p.author }}</div>
+                <div style="font:500 11px 'IBM Plex Mono',monospace;color:#75756e">@{{ p.handle }}</div>
+              </div>
+              <span style="margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:#0044a4;white-space:nowrap">View on X ↗</span>
+            </div>
+            <div style="font:400 13.5px/1.5 'Archivo',sans-serif;margin-top:12px;white-space:pre-line">{{ p.text }}</div>
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}"><div style="flex:1;min-height:0;margin-top:12px;display:flex"><img src="{{ p.img }}" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block"></div></sc-if>
+          </a>
+        </sc-for>
+        <sc-for list="{{ xpostsB }}" as="p">
+          <a href="{{ p.u }}" title="Post by {{ p.author }}" style="display:flex;flex-direction:column;width:380px;height:560px;box-sizing:border-box;margin-right:20px;border:2px solid #14161f;background:#fff;text-decoration:none;color:#14161f;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <img src="{{ p.av }}" alt="" style="width:38px;height:38px;border-radius:50%;display:block">
+              <div>
+                <div style="font:800 13.5px 'Archivo',sans-serif">{{ p.author }}</div>
+                <div style="font:500 11px 'IBM Plex Mono',monospace;color:#75756e">@{{ p.handle }}</div>
+              </div>
+              <span style="margin-left:auto;font:600 11px 'IBM Plex Mono',monospace;color:#0044a4;white-space:nowrap">View on X ↗</span>
+            </div>
+            <div style="font:400 13.5px/1.5 'Archivo',sans-serif;margin-top:12px;white-space:pre-line">{{ p.text }}</div>
+            <sc-if value="{{ p.hasImg }}" hint-placeholder-val="{{ true }}"><div style="flex:1;min-height:0;margin-top:12px;display:flex"><img src="{{ p.img }}" alt="" style="width:100%;height:100%;object-fit:contain;object-position:center top;display:block"></div></sc-if>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;color:#14161f;padding:72px 44px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1000px;margin:0 auto">
+      <div>
+        <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 24px;color:#14161f">FAQ</h2>
+        <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="4">
+          <div style="border-bottom:1px solid #d8d8d2">
+            <div onClick="{{ q.toggle }}" style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;font:700 16px 'Archivo',sans-serif;cursor:pointer">{{ q.q }}<span style="color:#0044a4">{{ q.sym }}</span></div>
+            <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 0 18px">
+                <sc-for list="{{ q.a }}" as="para" hint-placeholder-count="2">
+                  <p style="font:400 14px/1.65 'Archivo',sans-serif;color:#33363f;margin:0 0 12px;white-space:pre-line">{{ para }}</p>
+                </sc-for>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div>
+        <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 24px;color:#14161f">Resources ↗</h2>
+        <sc-for list="{{ resources }}" as="rs" hint-placeholder-count="4">
+          <a href="{{ rs.u }}" style="display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid #d8d8d2;font:700 16px 'Archivo',sans-serif;color:#14161f;text-decoration:none">{{ rs.t }}<span style="color:#0044a4">↗</span></a>
+        </sc-for>
+      </div>
+    </div>
+    <div style="max-width:1000px;margin:56px auto 0">
+      <h2 style="font:800 40px 'Archivo',sans-serif;text-transform:uppercase;margin:0 0 20px;color:#14161f">News and Updates</h2>
+      <div style="columns:2;column-gap:48px">
+        <sc-for list="{{ news }}" as="nw" hint-placeholder-count="10">
+          <a href="{{ nw.u }}" style="break-inside:avoid;display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px solid #d8d8d2;font:600 14px 'Archivo',sans-serif;color:#14161f;text-decoration:none">{{ nw.t }}<span style="font:500 10.5px 'IBM Plex Mono',monospace;color:#75756e;white-space:nowrap">{{ nw.s }} ↗</span></a>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#0044a4;color:#fff;padding:72px 44px;text-align:center">
+    <h2 style="font:800 40px/1 'Archivo',sans-serif;text-transform:uppercase;margin:0">Want to get involved?</h2>
+    <div style="display:flex;justify-content:center;gap:14px;margin-top:30px">
+      <a href="https://x.com/encryptmempool" style="background:#fff;color:#0044a4;padding:15px 30px;font:800 15px 'Archivo',sans-serif;text-decoration:none">DM US ON X</a>
+      <a href="https://qf.giveth.io/project/encrypt-the-mempool-stopping-toxic-mev-censorship" style="border:2.5px solid #fff;color:#fff;padding:15px 30px;font:800 15px 'Archivo',sans-serif;text-decoration:none">DONATE ON GIVETH</a>
+    </div>
+    <p style="font:500 13px/1.7 'Archivo',sans-serif;color:rgba(255,255,255,.85);max-width:64ch;margin:36px auto 0">This website is dedicated to bringing the Ethereum community together to support encrypting Ethereum's public mempool. We invite Ethereum client teams, developers and researchers, infrastructure teams, wallets, and community members to get involved.</p>
+    <p style="font:600 11px 'IBM Plex Mono',monospace;color:rgba(255,255,255,.7);margin:14px 0 0">Webpage created by <a href="https://brainbot.com/" style="color:#fff">brainbot</a>, core contributor for the <a href="https://www.shutter.network/" style="color:#fff">Shutter Network</a></p>
+  </div>
+</div>
+</div>
+
+</div>
+
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openReason: 0, faqOpen: -1 };
+  renderVals() {
+    const sh = "https://x.com/ShutterNetwork/status/";
+    const vals = {
+      shareX: "https://x.com/intent/post?text=Encrypt%20the%20mempool%21%0A%0AIt%27s%20time%20to%20protect%20Ethereum%20users%20from%20toxic%20MEV%20and%20real-time%20censorship.%0A%0AHelp%20bring%20encrypted%20mempools%20to%20Ethereum%20in%20the%20upcoming%20I%2A%20hardfork.%0A%0AJoin%20the%20coalition%3A%0Ahttps%3A%2F%2Fwww.encryptedmempool.org%2F",
+      shareFc: "https://farcaster.xyz/~/compose?text=Encrypt%20the%20mempool%21%0A%0AIt%27s%20time%20to%20protect%20Ethereum%20users%20from%20toxic%20MEV%20and%20real-time%20censorship.%0A%0AHelp%20bring%20encrypted%20mempools%20to%20Ethereum%20in%20the%20upcoming%20I%2A%20hardfork.%0A%0AJoin%20the%20coalition%3A%0Ahttps%3A%2F%2Fwww.encryptedmempool.org%2F",
+      evidence: [
+        { t: "Your current MEV protection can't guarantee safety", ph: "tweet screenshot", img: "assets/ev-601127_224357-crop.png" },
+        { t: "Your current MEV protection can still leak your trades", ph: "tweet screenshot", img: "assets/ev-614583_415669-crop.png" },
+        { t: "No one is safe (not even Vitalik)", ph: "tweet screenshot", img: "assets/ev-470245_625366-crop.png" },
+        { t: "Sandwich attacks aren't going away…", ph: "chart screenshot", img: "assets/ev-303671_423222-crop.png" },
+        { t: "Builder concentration is getting worse…", ph: "chart screenshot", img: "assets/ev-924926_356800-crop.png" }
+      ],
+      reasons: [
+        { n: "1", t: "It stops malicious MEV at the root", d: "Since 2020, more than $1.8 billion has been drained from Ethereum users through MEV, much of it from malicious tactics like front running and sandwich attacks. Encrypted mempools hide transaction contents until ordering is fixed, removing the visibility that attackers rely on. This makes front running much more difficult." },
+        { n: "2", t: "Protection moves toward default", d: "Today, users must hunt for protected DEXs, special wallets, or custom RPCs for malicious MEV protection. As a result, protection is fragmented and can be missed, especially by newcomers.\n\nIn the long run, a native encrypted mempool moves Ethereum toward a future where users are protected against front running, sandwich attacks, and real-time censorship by default.\n\nIn the near term, this EIP enables wallets to give their users this protection, without relying on private infrastructure or trusted intermediaries that introduce additional risk." },
+        { n: "3", t: "No more trusting private intermediaries", d: "Private mempools, commonly used via private RPCs, are a popular way Ethereum users protect themselves against toxic MEV. But they still rely on a small group of operators who can see your transaction and must be trusted not to attack it. That visibility creates a real point of failure.\n\nBy contrast, encrypted mempools keep transactions hidden from everyone. No operator, partner, future sequencer, or infrastructure provider can see transactions until it's confirmed.\n\nLearn more about the difference between private mempools and encryption mempools." },
+        { n: "4", t: "Gives stronger security guarantees for mainstream adoption", d: "Serious liquidity and institutional users need confidence that their transactions cannot be exploited.\n\nEncrypted mempools reduce reliance on trusted intermediaries and address concerns that previously hampered Ethereum adoption.\n\nThis is the level of protection Ethereum needs." },
+        { n: "5", t: "Protects against harmful MEV, while still allowing good MEV", d: "Not all MEV is bad. Encrypted mempools protect against front running and sandwich attacks (which is generally considered to be the major source of bad MEV), while still allowing arbitrage, liquidations, and back-running which is considered good MEV.\n\nLearn more about the difference between good and bad MEV." },
+        { n: "6", t: "Complements ePBS and FOCIL for stronger censorship resistance", d: "Now that ePBS and FOCIL are on the Ethereum roadmap, encrypted mempools can join them to create a powerful protection system. Together they create a strong, three-part defense against censorship, making sure your transaction is included on time and cannot be filtered or delayed.\n\nLearn more about the Holy Trinity for Censorship Resistance on Ethereum (FOCIL x ePBS x Encrypted Mempools)." },
+        { n: "7", t: "Reduces builder concentration risk", d: "Today most Ethereum blocks are built by a few high performance builders who gain early access to transaction contents. This concentration reduces Ethereum's censorship resistance guarantees. Encrypted mempools are a countermeasure that enables users to hide transaction content from builders and thereby make censorship much more difficult." }
+      ].map((r, i) => ({ ...r, open: this.state.openReason === i, sym: this.state.openReason === i ? "−" : "+", toggle: () => this.setState(s => ({ openReason: s.openReason === i ? -1 : i })) })),
+      members: [
+        { n: "Besu", u: "https://besu.hyperledger.org/", img: "assets/logos/besu.png" },
+        { n: "BTCS", u: "https://www.btcs.com/builder/", img: "assets/logos/btcs.png" },
+        { n: "CoW Swap", u: "https://swap.cow.fi/", img: "assets/logos/cowswap.png" },
+        { n: "DeFiScan", u: "https://www.defiscan.info/", img: "assets/logos/defiscan.png" },
+        { n: "ECH Institute", u: "https://echinstitute.org/", img: "assets/logos/ech.png" },
+        { n: "EigenPhi", u: "https://eigenphi.io/", img: "assets/logos/eigenphi.png" },
+        { n: "Erigon", u: "https://erigon.tech/", img: "assets/logos/erigon.png" },
+        { n: "EthDaily", u: "https://ethdaily.io/", img: "assets/logos/ethdaily.png" },
+        { n: "EtherWorld", u: "https://etherworld.co/", img: "assets/logos/etherworld.png" },
+        { n: "EVMavericks", u: "https://dailydoots.com/", img: "assets/logos/evmavericks.png" },
+        { n: "Fairblock", u: "https://www.fairblock.network/", img: "assets/logos/fairblock.png" },
+        { n: "Giveth", u: "https://giveth.io/", img: "assets/logos/giveth.png" },
+        { n: "Nethermind", u: "https://www.nethermind.io/", img: "assets/logos/nethermind.png" },
+        { n: "Nillion", u: "https://nillion.com/", img: "assets/logos/nillion.png" },
+        { n: "Octant", u: "https://octant.app/dashboard", img: "assets/logos/octant.png" },
+        { n: "Primev", u: "https://www.primev.xyz/", img: "assets/logos/primev.png" },
+        { n: "Quasar Builder", u: "https://quasar.win/", img: "assets/logos/quasar.png" },
+        { n: "SeedGov", u: "https://seedgov.org/", img: "assets/logos/seedgov.png" },
+        { n: "Shutter", u: "https://www.shutter.network/", img: "assets/logos/shutter.png" },
+        { n: "The Blockchain Socialist", u: "https://theblockchainsocialist.com/", img: "assets/logos/tbs.png" },
+        { n: "The Interfold", u: "https://www.theinterfold.com/", img: "assets/logos/interfold.png" },
+        { n: "Walletbeat", u: "https://beta.walletbeat.eth.limo/", img: "assets/logos/walletbeat.png" },
+        { n: "Web3Privacy Now", u: "https://web3privacy.info/", img: "assets/logos/w3pn.png" }
+      ],
+      contributors: [
+        { n: "Ana Marija", o: "Giveth", d: "— " },
+        { n: "Anders Elowsson", o: "Ethereum Foundation", d: "— ", u: "https://x.com/weboftrees/status/2034268464374788169" },
+        { n: "Andrew Ashikhmin", o: "Erigon", d: "— " },
+        { n: "Anthony Caravello", o: "Shutter Network", d: "— ", u: "https://x.com/acaravello/status/2054777974449115264" },
+        { n: "Andrei Lapets", o: "Nillion", d: "— " },
+        { n: "Auryn Macmillan", o: "Gnosis Guild & The Interfold", d: "— ", u: sh + "2047356034964926772" },
+        { n: "Ben Broad", o: "EVMavericks", d: "— ", u: "https://farcaster.xyz/bbroad/0x91b9345a" },
+        { n: "Benjamin Hunter", o: "BTCS", d: "— " },
+        { n: "Brian Adams", o: "Eureka", d: "— " },
+        { n: "Bryant Soorkia", o: "Gnosis Guild & The Interfold", d: "— " },
+        { n: "Cotabe Moral", o: "Giveth & TheDAO", d: "— ", u: sh + "2048872149385932862" },
+        { n: "Crypto Goblin", o: "Weaving Web3", d: "— ", u: sh + "2021147866027442644" },
+        { n: "eccogrinder", o: "Gnosis Guild & The Interfold", d: "— " },
+        { n: "Gleb Krivosheev", o: "Web3 Journalist", d: "— ", u: "https://cointelegraph.com/research/eip-8105-a-new-design-for-ethereums-encrypted-mempool" },
+        { n: "Gottfried Herold", o: "Ethereum Foundation", d: "— " },
+        { n: "Greystroke", o: "", d: "" },
+        { n: "Griff Green", o: "Giveth & TheDAO", d: "— ", u: sh + "2043656202161172546" },
+        { n: "Heiko Franssen", o: "brainbot", d: "— " },
+        { n: "Ivey", o: "SEEDGov", d: "— " },
+        { n: "Jannik Luhn", o: "Shutter Network", d: "— ", u: "https://ethereum-magicians.org/t/hegota-headliner-proposal-eip-8105-universal-enshrined-encrypted-mempool-eem/27448" },
+        { n: "jensei", o: "Web3Privacy", d: "— " },
+        { n: "Joe", o: "EthDaily", d: "— ", u: "https://x.com/ethdaily/status/2065100648706925007" },
+        { n: "Josh Dávila", o: "The Blockchain Socialist", d: "— ", u: sh + "2013932133111222304" },
+        { n: "JT Nichols", o: "EVMavericks", d: "— ", u: "https://x.com/ProDJKC/status/2065078992487542943" },
+        { n: "Julian Ma", o: "Eth Labs", d: "— ", u: "https://x.com/_julianma/status/2032067843635007508" },
+        { n: "Justin Florentine", o: "Besu", d: "— ", u: sh + "2024543383445000249" },
+        { n: "Konrad", o: "Shutter Network", d: "— " },
+        { n: "Ke, Bryan, Zheng", o: "ShipAI.ca", d: "— ", u: sh + "1992907186176147902" },
+        { n: "Loring Harkness", o: "Shutter Network", d: "— ", u: sh + "1991802427499319543" },
+        { n: "Luis Bezzenberger", o: "Shutter Network", d: "— ", u: sh + "1998050711226220690" },
+        { n: "Marc Harvey-Hill", o: "Nethermind", d: "— ", u: sh + "1996173315933909127" },
+        { n: "Marc Holt", o: "Erigon", d: "— " },
+        { n: "Marc Vlad", o: "DeFiScan", d: "— " },
+        { n: "Mashal Waqar", o: "Octant", d: "— " },
+        { n: "Mercy Boma", o: "", d: "" },
+        { n: "Miguel de Vega", o: "Nillion", d: "— " },
+        { n: "Milen Filatov", o: "Erigon", d: "— " },
+        { n: "Mitch (divinecomedian.eth)", o: "", d: "", u: "https://x.com/divine_comedian" },
+        { n: "Murat Akdeniz", o: "Primev", d: "— ", u: sh + "2001576216453841006" },
+        { n: "Mykola Siusko", o: "Web3Privacy", d: "— " },
+        { n: "namic", o: "", d: "" },
+        { n: "Peyman Momeni", o: "Fairblock", d: "— ", u: "https://x.com/Pememoni/status/2020143930008879263" },
+        { n: "polymutex", o: "Walletbeat", d: "— ", u: "https://x.com/polymutex/status/2066883540495519924" },
+        { n: "Pooja Ranjan", o: "ECH Institute & EtherWorld", d: "— " },
+        { n: "Punit Jain", o: "Shutter Network", d: "— " },
+        { n: "Sham", o: "Nillion", d: "— " },
+        { n: "Tino", o: "SEEDGov", d: "— ", u: sh + "2067217292157657207" },
+        { n: "Ulrich Petri", o: "Shutter Network", d: "— " },
+        { n: "Yousra Lembachar", o: "Shutter Network", d: "— " },
+        { n: "Zeugh", o: "Anticapture", d: "— " }
+      ],
+      faqs: [
+        { q: "What is the Encrypt the Mempool! Coalition?", open: this.state.faqOpen === 0, i: 0, a: [
+          "The Encrypt the Mempool! Coalition is a community effort to protect Ethereum users from front running, sandwich attacks, and real-time censorship. Together with Ethereum client teams, developers and researchers, infrastructure teams, wallets and community members, we are pushing for one clear goal: Encrypt Ethereum's public mempool in the upcoming I* hardfork.",
+          "Coalition members help raise awareness, build public support, and push forward the case for an encrypted mempool on Ethereum."
+        ] },
+        { q: "What progress is being made on an encrypted mempool for Ethereum?", open: this.state.faqOpen === 1, i: 1, a: [
+          "For months, contributors across the Ethereum ecosystem have been working toward an EIP for an encrypted mempool on Ethereum. An EIP, or Ethereum Improvement Proposal, is how Ethereum contributors propose changes to the protocol.",
+          "LUCID is one earlier EIP proposal that has helped shape the discussion, but it is not necessarily the final design. The current work is focused on refining the approach, making improvements to execution quality, and preparing an EIP for submission ahead of Ethereum's upcoming I* hardfork.",
+          "Technical working groups are actively discussing the design so Ethereum has a credible path toward protocol-level mempool encryption."
+        ] },
+        { q: "Is an encrypted mempool the same thing as a private mempool?", open: this.state.faqOpen === 2, i: 2, a: [
+          "Nope! Private mempools, commonly used via private RPCs, are a popular way Ethereum users protect themselves against malicious MEV. But they still rely on a small group of operators who can see your transaction and must be trusted not to attack it. That visibility creates a real point of failure.",
+          "By contrast, encrypted mempools keep transactions hidden from everyone. No operator, partner, future sequencer, or infrastructure provider can see transactions until it's confirmed."
+        ] },
+        { q: "How viable are encrypted mempools?", open: this.state.faqOpen === 3, i: 3, a: [
+          "Encrypted mempools have been researched for years and tested across both experimental and live deployments.",
+          "• A live encrypted mempool on Gnosis Chain has processed thousands of encrypted transactions with support from Nethermind and Erigon validators, proving the model works in production.\n• Shutterized Beacon Chain research demonstrated how encrypted ordering can integrate safely with Ethereum consensus.\n• Deployment on the Sepholia OP Stack testnet validated encrypted flows in an L2 environment.\n• An upcoming proof of concept with Primev brings encrypted ordering into Ethereum's out of protocol transaction supply chain PBS.\n• A previously published long-term roadmap, created with partners including Gnosis, Nethermind, Chainbound, and MEV Blocker, outlined the path for bringing encrypted mempools to Ethereum."
+        ] },
+      ].map(f => ({ ...f, toggle: () => this.setState(s => ({ faqOpen: s.faqOpen === f.i ? -1 : f.i })), sym: this.state.faqOpen === f.i ? "–" : "+" })),
+      resources: [
+        { t: "LUCID EIP", d: "eips.ethereum.org · EIP-8184", u: "https://eips.ethereum.org/EIPS/eip-8184" },
+        { t: "LUCID EIP FAQs", d: "Google Doc", u: "https://docs.google.com/document/d/1bfXeDQyyG5uaBYpK2eB_LrT-148ZDDjmTO3_Y1Tq0Mo/edit?usp=sharing" },
+        { t: "Tech Working Group Recordings", d: "YouTube playlist", u: "https://www.youtube.com/watch?v=0dr8gf-yMl0&list=PLJqWcTqh_zKH6BWQNJBTsIispobvV7pa4" },
+        { t: "MEV Sandwich Trades on Dune", d: "dune.com/hildobby", u: "https://dune.com/hildobby/sandwiches" }
+      ],
+      news: [
+        { t: "Ethereum Encrypted Mempool Progress and Challenges", s: "EtherWorld", u: "https://etherworld.co/ethereum-encrypted-mempool-progress-challenges-the-road-to-hegota/" },
+        { t: "Ethereum Coalition Pushes for Encrypted Mempool", s: "EtherWorld", u: "https://etherworld.co/ethereum-coalition-pushes-for-encrypted-mempool-in-upcoming-hardfork/" },
+        { t: "Those calling for an encrypted mempool on Ethereum!", s: "X" },
+        { t: "Encrypted mempools for wallet protection", s: "article" },
+        { t: "Encrypt the mempool! on Daily Doots", s: "Daily Doots" },
+        { t: "MEV Is Broken on Ethereum — Can Encrypted Mempools Fix It?", s: "YouTube", u: "https://youtu.be/uCt8updE5zs" },
+        { t: "Encrypted mempool 101 by Ethdaily", s: "EthDaily" },
+        { t: "Why Ethereum needs an encrypted mempool", s: "article" },
+        { t: "Encrypted mempools on The Daily Gwei", s: "The Daily Gwei" },
+        { t: "The first encrypted mempool is coming to PBS on Ethereum", s: "article" }
+      ]
+    };
+    vals.xposts = [
+      { id: "1991802427499319543", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [01]\n\n@LoringHarkness - why now is the perfect time to start thinking about encrypted mempools on Ethereum mainnet" },
+      { id: "1992907186176147902", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [02]\n\n@BryanzkEth from @EigenPhi - why encrypted mempools are the real fix to stopping front runners and sandwich attackers" },
+      { id: "1996173315933909127", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [03]\n\n@marchhill1 from @Nethermind - why FOCIL and encrypted mempools would be a powerful combination for censorship resistance 💪" },
+      { id: "1998050711226220690", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [04]\n\n@bezzenberger - some people think builders oppose encrypted mempools because it reduces their MEV income 👉 that's actually false\n\nHere's what builders really think" },
+      { id: "2001576216453841006", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [05]\n\n@MuratLite founder of @primev_xyz - shares how the Primev x Shutter partnership is creating a new way of getting onchain, which is entirely private 🔒" },
+      { id: "2013932133111222304", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [07]\n\n@TBSocialist - shares why he's supportive of an encrypted mempool on Ethereum and what it could bring to the ecosystem" },
+      { id: "2021147866027442644", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the mempool [08]\n\n@Crypto_Goblinz - calls for security and order in the Ethereum galaxy by encrypting the mempool\n\nLet's do it for the normies and everybody else" },
+      { id: "2024543383445000249", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the Mempool [09]\n\n@robocopsgonemad shares what often gets missed in discussions - adding an encrypted mempool to Ethereum is an opportunity for a real paradigm shift\n\nIt enables something the digital world has never achieved before: fair markets without intermediaries" },
+      { id: "2043656202161172546", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the Mempool [11]\n\n@griffgreen knows that crypto is an adversarial environment and that encrypted mempools make crypto more usable for normal people" },
+      { id: "2047356034964926772", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the Mempool [12]\n\n@auryn_macmillan - encrypted mempools are a critical missing component of a complete economic system on Ethereum" },
+      { id: "2048872149385932862", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the Mempool [13]\n\n@Cotabe_M is bullish on encrypted mempools 🔥\n\nThey are the key to stopping the sandwich attacks plaguing Ethereum and finally restoring fairness for users" },
+      { id: "2065100648706925007", author: "ethdaily.eth", handle: "ethdaily", text: "We're proud to join the new Encrypt the Mempool Coalition!\n\nAlongside industry leaders, we're pushing to integrate an EIP to encrypt the mempool in Ethereum's I* Hardfork - to stop toxic MEV & real-time censorship in a decentralized & credibly neutral way.\n\nJoin the coalition 👇" },
+      { id: "2067217292157657207", author: "Shutter 🛡️⚔️", handle: "ShutterNetwork", text: "Voices from the Mempool [14]\n\nEncrypt the Mempool! Coalition member @Cryp_tino (@SEEDGov) explains the visibility problem on Ethereum's unencrypted public mempool and shares difference between good and bad MEV" },
+      { id: "2034268464374788169", noImg: true, author: "Anders Elowsson 🌻", handle: "weboftrees", text: "The full LUCID encrypted mempool EIP-8184 is now up! LUCID is a public encrypted mempool for commit-before-reveal inclusion of MEV-sensitive transactions, without enshrining a specific encryption scheme. With coauthors @_julianma and @robocopsgonemad\n\nethereum-magicians.org/t/eip-8184-lucid-encrypted-mempool/28017" },
+      { id: "2054777974449115264", noImg: true, author: "Anthony Caravello", handle: "acaravello", text: "What did we learn the past 2 months about toxic MEV?\n\n1. you can still be attacked using MEV protection\n2. your transactions could still be leaked\n3. other chains are racing to encrypt their mempools\n\nIt's time we end toxic MEV on Ethereum\nEncrypt the mempool!" },
+      { id: "2065078992487542943", noImg: true, author: "⟠ JT Nichol 🦇🔊", handle: "ProDJKC", text: "Encrypt the Mempool.  encryptedmempool.org" },
+      { id: "2032067843635007508", noImg: true, author: "Julian", handle: "_julianma", text: "Ethereum needs an Encrypted Mempool and it needs it fast.\n\nIt's not just about stopping sandwiching. Encrypted mempools are how Ethereum matures its onchain markets.\n\nI just published a post on why Ethereum needs encrypted mempools. Here are the core arguments:" },
+      { id: "2020143930008879263", noImg: true, author: "Pie Man", handle: "Pememoni", text: "EIP-8105 is a necessary step for Ethereum to meaningfully address pre-execution info leakage. It enables censorship resistance and plausible deniability for block proposers by protecting tx contents, while also mitigating exploitative strategies.\n\nethresear.ch/t/universal-enshrined-encrypted-mempool-eip/23685" },
+      { id: "2066883540495519924", noImg: true, author: "polymutex 🌸", handle: "polymutex", text: "Speaking about encrypted mempools now.\nx.com/i/spaces/1qJDzzALYRDKV" }
+    ].map(p => ({ ...p, hasImg: !p.noImg, u: "https://x.com/" + p.handle + "/status/" + p.id, img: p.noImg ? undefined : "assets/xposts/" + p.id + ".jpg", av: "assets/xposts/av-" + p.id + ".jpg" }));
+    vals.xpostsA = vals.xposts.filter((_, i) => i % 2 === 0);
+    vals.xpostsB = vals.xposts.filter((_, i) => i % 2 === 1);
+    return vals;
+  }
+}
+</script>
+</body>
+</html>

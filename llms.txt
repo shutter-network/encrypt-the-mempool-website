@@ -1,0 +1,46 @@
+# Encrypt the Mempool!
+
+> A coalition pushing to add encrypted mempool support to Ethereum in the upcoming I* hardfork — to stop front running, sandwich attacks, and real-time censorship at the protocol level.
+
+## What This Site Is
+
+This is the campaign site for the Encrypt the Mempool! coalition. It documents the case for encrypting Ethereum's public mempool, lists coalition members and contributors, and explains how people can get involved.
+
+## The Problem
+
+Every time an Ethereum user submits a transaction, it sits visible in the public mempool before being confirmed. Bots and builders can see transaction intent and exploit it — front running trades, sandwiching swaps, and filtering or delaying transactions in real time. Over $1.8 billion has been extracted from Ethereum users through MEV since 2020.
+
+## The Solution
+
+An encrypted mempool on Ethereum would hide transaction contents from everyone until ordering is fixed by the chain. This removes the visibility that fuels malicious MEV and censorship, while preserving decentralization and credible neutrality. Unlike private mempools (which rely on trusted intermediaries who can still see your transaction), encrypted mempools provide trustless protection for all users by default.
+
+## The EIP
+
+The coalition supports adding an encrypted mempool to Ethereum in the I* hardfork via a protocol-level EIP. The leading proposal is EIP-8184 (LUCID), authored by Anders Elowsson, Julian Ma, and others. LUCID enables commit-before-reveal inclusion of MEV-sensitive transactions without enshrining a specific encryption scheme.
+
+- EIP: https://eips.ethereum.org/EIPS/eip-8184
+- Ethereum Magicians discussion: https://ethereum-magicians.org/t/eip-8184-lucid-encrypted-mempool/28017
+
+## Coalition Members
+
+Besu, BTCS, CoW Swap, DeFiScan, ECH Institute, EigenPhi, Erigon, EthDaily, EtherWorld, EVMavericks, Fairblock, Giveth, Nethermind, Nillion, Octant, Primev, Quasar Builder, SeedGov, Shutter Network, The Blockchain Socialist, The Interfold, Walletbeat, Web3Privacy Now.
+
+## Working Groups
+
+- Tech Working Group: open to developers and researchers working on encrypted mempool implementation. Meets weekly.
+- Business/Marcomms Working Group: focused on education, stakeholder outreach, and partnerships.
+
+Meeting info: https://github.com/shutter-network/encrypted-mempool-pm/
+
+## Key Facts
+
+- Encrypted mempools protect against front running and sandwich attacks (bad MEV) while still allowing arbitrage, liquidations, and back-running (good MEV).
+- A live encrypted mempool on Gnosis Chain has already processed thousands of encrypted transactions with Nethermind and Erigon validator support.
+- Encrypted mempools complement ePBS and FOCIL for a three-part censorship resistance stack.
+- The technology reduces builder concentration risk by hiding transaction content from builders until block finalization.
+
+## Contact / Get Involved
+
+- X/Twitter: https://x.com/encryptmempool
+- Donate: https://qf.giveth.io/project/encrypt-the-mempool-stopping-toxic-mev-censorship
+- Site: https://www.encryptedmempool.org/

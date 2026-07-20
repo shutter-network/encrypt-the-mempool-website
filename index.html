@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encrypt the Mempool!</title>
+  <meta name="description" content="Join the coalition to protect the Ethereum community against front running, sandwich attacks, and real-time censorship.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.encryptedmempool.org/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.encryptedmempool.org/">
+  <meta property="og:title" content="Encrypt the Mempool!">
+  <meta property="og:description" content="Join the coalition to protect the Ethereum community against front running, sandwich attacks, and real-time censorship.">
+  <meta property="og:image" content="https://www.encryptedmempool.org/assets/xposts/og-encryptedmempool.png">
+  <meta property="og:site_name" content="Encrypt the Mempool!">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@encryptmempool">
+  <meta name="twitter:title" content="Encrypt the Mempool!">
+  <meta name="twitter:description" content="Join the coalition to protect the Ethereum community against front running, sandwich attacks, and real-time censorship.">
+  <meta name="twitter:image" content="https://www.encryptedmempool.org/assets/xposts/og-encryptedmempool.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- Matomo: cookieless by default, cookies enabled on consent -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['disableCookies']);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u = 'https://shutter.matomo.cloud/';
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '10']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true; g.src = 'https://cdn.matomo.cloud/shutter.matomo.cloud/matomo.js';
+      s.parentNode.insertBefore(g, s);
+    })();
+
+    (function() {
+      var CONSENT_KEY = 'etm_analytics_consent';
+      var consent = localStorage.getItem(CONSENT_KEY);
+      if (consent === 'accepted') {
+        _paq.push(['rememberCookieConsentGiven']);
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        var banner = document.getElementById('etm-consent-banner');
+        var acceptBtn = document.getElementById('etm-consent-accept');
+        var declineBtn = document.getElementById('etm-consent-decline');
+        if (consent === null) {
+          banner.removeAttribute('hidden');
+        }
+        acceptBtn.addEventListener('click', function() {
+          localStorage.setItem(CONSENT_KEY, 'accepted');
+          banner.setAttribute('hidden', '');
+          _paq.push(['rememberCookieConsentGiven']);
+        });
+        declineBtn.addEventListener('click', function() {
+          localStorage.setItem(CONSENT_KEY, 'declined');
+          banner.setAttribute('hidden', '');
+        });
+      });
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero__inner">
+    <img src="assets/eth-diamond.png" alt="Ethereum" class="hero__diamond">
+    <h1 class="hero__title">
+      <span class="hero__highlight"><span>Encrypt</span></span><br>
+      the Mempool!
+    </h1>
+    <p class="hero__sub">Join the coalition to protect the Ethereum community against front running, sandwich attacks, and real-time censorship.</p>
+    <div class="hero__ctas">
+      <a href="#support" class="btn btn--yellow">JOIN THE EFFORT</a>
+      <a href="#video" class="btn btn--outline">WTF IS AN ENCRYPTED MEMPOOL?</a>
+    </div>
+  </div>
+  <div class="hero__marquee-wrap">
+    <div class="hero__marquee">
+      <span>Besu</span><span>BTCS</span><span>CoW Swap</span><span>DeFiScan</span><span>ECH Institute</span><span>EigenPhi</span><span>Erigon</span><span>EthDaily</span><span>EtherWorld</span><span>EVMavericks</span><span>Fairblock</span><span>Giveth</span><span>Nethermind</span><span>Nillion</span><span>Octant</span><span>Primev</span><span>Quasar Builder</span><span>SeedGov</span><span>Shutter</span><span>The Blockchain Socialist</span><span>The Interfold</span><span>Walletbeat</span><span>Web3Privacy Now</span>
+      <span>Besu</span><span>BTCS</span><span>CoW Swap</span><span>DeFiScan</span><span>ECH Institute</span><span>EigenPhi</span><span>Erigon</span><span>EthDaily</span><span>EtherWorld</span><span>EVMavericks</span><span>Fairblock</span><span>Giveth</span><span>Nethermind</span><span>Nillion</span><span>Octant</span><span>Primev</span><span>Quasar Builder</span><span>SeedGov</span><span>Shutter</span><span>The Blockchain Socialist</span><span>The Interfold</span><span>Walletbeat</span><span>Web3Privacy Now</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="problem__inner">
+    <div class="problem__headline">Every Ethereum user has felt this.</div>
+    <div class="problem__body">
+      <p>You submit a trade. You click mint. You hit send. Moments later, you get a worse price, miss the NFT, or watch your transaction stall.</p>
+      <p>This is not a wallet problem, not a DEX problem, not a user mistake. It's how Ethereum handles transactions by default. Before a transaction is confirmed, it sits visible in the public mempool. Bots, builders, and others can see your intent and use that visibility to extract value from you with front running and sandwich attacks.</p>
+      <p><strong>An encrypted mempool on Ethereum would change this.</strong> It would let you send encrypted transactions that stay hidden from everyone until your transaction is locked in by the chain. This removes the visibility that fuels front running, sandwich attacks, and real-time censorship, while preserving decentralization and credible neutrality.</p>
+      <p>We've come together to rally support to Encrypt the Mempool! in Ethereum's upcoming I* hardfork.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE -->
+<section class="evidence" id="evidence">
+  <div class="evidence__inner">
+    <h2 class="evidence__title">The Human Cost of Toxic MEV :(</h2>
+    <div class="evidence__grid">
+      <div class="evidence__card">
+        <div class="evidence__card-title">Your current MEV protection can't guarantee safety</div>
+        <div class="evidence__card-img"><img src="assets/ev-601127_224357-crop.png" alt="Your current MEV protection can't guarantee safety"></div>
+      </div>
+      <div class="evidence__card">
+        <div class="evidence__card-title">Your current MEV protection can still leak your trades</div>
+        <div class="evidence__card-img"><img src="assets/ev-614583_415669-crop.png" alt="Your current MEV protection can still leak your trades"></div>
+      </div>
+      <div class="evidence__card">
+        <div class="evidence__card-title">No one is safe (not even Vitalik)</div>
+        <div class="evidence__card-img"><img src="assets/ev-470245_625366-crop.png" alt="No one is safe (not even Vitalik)"></div>
+      </div>
+      <div class="evidence__card">
+        <div class="evidence__card-title">Sandwich attacks aren't going away…</div>
+        <div class="evidence__card-img"><img src="assets/ev-303671_423222-crop.png" alt="Sandwich attacks aren't going away"></div>
+      </div>
+      <div class="evidence__card">
+        <div class="evidence__card-title">Builder concentration is getting worse…</div>
+        <div class="evidence__card-img"><img src="assets/ev-924926_356800-crop.png" alt="Builder concentration is getting worse"></div>
+      </div>
+      <div class="evidence__stat">$1.8B+ drained from Ethereum users through MEV since 2020 — much of it via front running and sandwich attacks</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section" id="video">
+  <div class="video-section__inner">
+    <h2 class="video-section__title">WTF is an Encrypted Mempool?</h2>
+    <div class="video-section__frame">
+      <iframe src="https://www.youtube.com/embed/KTsLMTqux1s" title="WTF is an Encrypted Mempool?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- 7 REASONS -->
+<section class="reasons" id="reasons">
+  <div class="reasons__inner">
+    <h2 class="reasons__title">7 Reasons Why Ethereum Needs an Encrypted Mempool</h2>
+    <div class="reasons__list">
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">1</span>
+          <span class="reasons__label">It stops malicious MEV at the root</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Since 2020, more than $1.8 billion has been drained from Ethereum users through MEV, much of it from malicious tactics like front running and sandwich attacks. Encrypted mempools hide transaction contents until ordering is fixed, removing the visibility that attackers rely on. This makes front running much more difficult.</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">2</span>
+          <span class="reasons__label">Protection moves toward default</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Today, users must hunt for protected DEXs, special wallets, or custom RPCs for malicious MEV protection. As a result, protection is fragmented and can be missed, especially by newcomers.</p>
+          <p>In the long run, a native encrypted mempool moves Ethereum toward a future where users are protected against front running, sandwich attacks, and real-time censorship by default.</p>
+          <p>In the near term, this EIP enables wallets to give their users this protection, without relying on private infrastructure or trusted intermediaries that introduce additional risk.</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">3</span>
+          <span class="reasons__label">No more trusting private intermediaries</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Private mempools, commonly used via private RPCs, are a popular way Ethereum users protect themselves against toxic MEV. But they still rely on a small group of operators who can see your transaction and must be trusted not to attack it. That visibility creates a real point of failure.</p>
+          <p>By contrast, encrypted mempools keep transactions hidden from everyone. No operator, partner, future sequencer, or infrastructure provider can see transactions until it's confirmed.</p>
+          <p>Learn more about the difference between private mempools and encryption mempools.</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">4</span>
+          <span class="reasons__label">Gives stronger security guarantees for mainstream adoption</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Serious liquidity and institutional users need confidence that their transactions cannot be exploited.</p>
+          <p>Encrypted mempools reduce reliance on trusted intermediaries and address concerns that previously hampered Ethereum adoption.</p>
+          <p>This is the level of protection Ethereum needs.</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">5</span>
+          <span class="reasons__label">Protects against harmful MEV, while still allowing good MEV</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Not all MEV is bad. Encrypted mempools protect against front running and sandwich attacks (which is generally considered to be the major source of bad MEV), while still allowing arbitrage, liquidations, and back-running which is considered good MEV.</p>
+          <p>Learn more about the difference between good and bad MEV.</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">6</span>
+          <span class="reasons__label">Complements ePBS and FOCIL for stronger censorship resistance</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Now that ePBS and FOCIL are on the Ethereum roadmap, encrypted mempools can join them to create a powerful protection system. Together they create a strong, three-part defense against censorship, making sure your transaction is included on time and cannot be filtered or delayed.</p>
+          <p>Learn more about the Holy Trinity for Censorship Resistance on Ethereum (FOCIL x ePBS x Encrypted Mempools).</p>
+        </div>
+      </div>
+
+      <div class="reasons__item">
+        <button class="reasons__trigger">
+          <span class="reasons__num">7</span>
+          <span class="reasons__label">Reduces builder concentration risk</span>
+          <span class="reasons__sym">+</span>
+        </button>
+        <div class="reasons__body">
+          <p>Today most Ethereum blocks are built by a few high performance builders who gain early access to transaction contents. This concentration reduces Ethereum's censorship resistance guarantees. Encrypted mempools are a countermeasure that enables users to hide transaction content from builders and thereby make censorship much more difficult.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO SUPPORT -->
+<section class="support" id="support">
+  <div class="support__inner">
+    <h2 class="support__title">I'm in! How Can I Support?</h2>
+    <div class="support__grid">
+
+      <div class="support__card">
+        <div class="support__card-title">1 · Join 🛠 Tech Working Group</div>
+        <div class="support__card-desc">Open to those wanting to support encrypting mempool development</div>
+        <div class="support__card-date">Next meeting: Wed, 22 July 15:00 UTC</div>
+        <a href="https://github.com/ethereum/pm/issues/2118" class="btn btn--yellow" target="_blank" rel="noopener">ADD MEETING TO CALENDAR</a>
+      </div>
+
+      <div class="support__card">
+        <div class="support__card-title">2 · Join 🚀 Business/Marcomms Working Group</div>
+        <div class="support__card-desc">Focused on education, stakeholder outreach, partnerships</div>
+        <div class="support__card-date">Next meeting: Wed, 15 July 15:00 UTC</div>
+        <a href="https://github.com/shutter-network/encrypted-mempool-pm/issues/12" class="btn btn--yellow" target="_blank" rel="noopener">ADD MEETING TO CALENDAR</a>
+      </div>
+
+      <div class="support__card">
+        <div class="support__card-title">3 · Love this? Share it!</div>
+        <div class="support__card-desc">A post will be pre-generated, which you can edit. Tag your favorite wallet and DEX and tell them to adopt!</div>
+        <a href="https://x.com/intent/post?text=Encrypt%20the%20mempool%21%0A%0AIt%27s%20time%20to%20protect%20Ethereum%20users%20from%20toxic%20MEV%20and%20real-time%20censorship.%0A%0AHelp%20bring%20encrypted%20mempools%20to%20Ethereum%20in%20the%20upcoming%20I%2A%20hardfork.%0A%0AJoin%20the%20coalition%3A%0Ahttps%3A%2F%2Fwww.encryptedmempool.org%2F" class="btn btn--yellow" target="_blank" rel="noopener">POST ON X/TWITTER</a>
+        <a href="https://farcaster.xyz/~/compose?text=Encrypt%20the%20mempool%21%0A%0AIt%27s%20time%20to%20protect%20Ethereum%20users%20from%20toxic%20MEV%20and%20real-time%20censorship.%0A%0AHelp%20bring%20encrypted%20mempools%20to%20Ethereum%20in%20the%20upcoming%20I%2A%20hardfork.%0A%0AJoin%20the%20coalition%3A%0Ahttps%3A%2F%2Fwww.encryptedmempool.org%2F" class="btn btn--yellow" target="_blank" rel="noopener">POST ON FARCASTER</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- COALITION -->
+<section class="coalition" id="coalition">
+  <div class="coalition__inner">
+    <h2 class="coalition__title">Coalition Members</h2>
+    <div class="coalition__grid">
+      <a href="https://besu.hyperledger.org/" title="Besu" target="_blank" rel="noopener"><img src="assets/logos/besu.png" alt="Besu"></a>
+      <a href="https://www.btcs.com/builder/" title="BTCS" target="_blank" rel="noopener"><img src="assets/logos/btcs.png" alt="BTCS"></a>
+      <a href="https://swap.cow.fi/" title="CoW Swap" target="_blank" rel="noopener"><img src="assets/logos/cowswap.png" alt="CoW Swap"></a>
+      <a href="https://www.defiscan.info/" title="DeFiScan" target="_blank" rel="noopener"><img src="assets/logos/defiscan.png" alt="DeFiScan"></a>
+      <a href="https://echinstitute.org/" title="ECH Institute" target="_blank" rel="noopener"><img src="assets/logos/ech.png" alt="ECH Institute"></a>
+      <a href="https://eigenphi.io/" title="EigenPhi" target="_blank" rel="noopener"><img src="assets/logos/eigenphi.png" alt="EigenPhi"></a>
+      <a href="https://erigon.tech/" title="Erigon" target="_blank" rel="noopener"><img src="assets/logos/erigon.png" alt="Erigon"></a>
+      <a href="https://ethdaily.io/" title="EthDaily" target="_blank" rel="noopener"><img src="assets/logos/ethdaily.png" alt="EthDaily"></a>
+      <a href="https://etherworld.co/" title="EtherWorld" target="_blank" rel="noopener"><img src="assets/logos/etherworld.png" alt="EtherWorld"></a>
+      <a href="https://dailydoots.com/" title="EVMavericks" target="_blank" rel="noopener"><img src="assets/logos/evmavericks.png" alt="EVMavericks"></a>
+      <a href="https://www.fairblock.network/" title="Fairblock" target="_blank" rel="noopener"><img src="assets/logos/fairblock.png" alt="Fairblock"></a>
+      <a href="https://giveth.io/" title="Giveth" target="_blank" rel="noopener"><img src="assets/logos/giveth.png" alt="Giveth"></a>
+      <a href="https://www.nethermind.io/" title="Nethermind" target="_blank" rel="noopener"><img src="assets/logos/nethermind.png" alt="Nethermind"></a>
+      <a href="https://nillion.com/" title="Nillion" target="_blank" rel="noopener"><img src="assets/logos/nillion.png" alt="Nillion"></a>
+      <a href="https://octant.app/dashboard" title="Octant" target="_blank" rel="noopener"><img src="assets/logos/octant.png" alt="Octant"></a>
+      <a href="https://www.primev.xyz/" title="Primev" target="_blank" rel="noopener"><img src="assets/logos/primev.png" alt="Primev"></a>
+      <a href="https://quasar.win/" title="Quasar Builder" target="_blank" rel="noopener"><img src="assets/logos/quasar.png" alt="Quasar Builder"></a>
+      <a href="https://seedgov.org/" title="SeedGov" target="_blank" rel="noopener"><img src="assets/logos/seedgov.png" alt="SeedGov"></a>
+      <a href="https://www.shutter.network/" title="Shutter" target="_blank" rel="noopener"><img src="assets/logos/shutter.png" alt="Shutter"></a>
+      <a href="https://theblockchainsocialist.com/" title="The Blockchain Socialist" target="_blank" rel="noopener"><img src="assets/logos/tbs.png" alt="The Blockchain Socialist"></a>
+      <a href="https://www.theinterfold.com/" title="The Interfold" target="_blank" rel="noopener"><img src="assets/logos/interfold.png" alt="The Interfold"></a>
+      <a href="https://beta.walletbeat.eth.limo/" title="Walletbeat" target="_blank" rel="noopener"><img src="assets/logos/walletbeat.png" alt="Walletbeat"></a>
+      <a href="https://web3privacy.info/" title="Web3Privacy Now" target="_blank" rel="noopener"><img src="assets/logos/w3pn.png" alt="Web3Privacy Now"></a>
+      <div class="coalition__join">Your org here → Join us</div>
+    </div>
+
+    <div class="contributors">
+      <div class="contributors__title">Contributors &amp; Supporters</div>
+      <div class="contributors__list">
+        <div class="contributors__item">Ana Marija<span> — Giveth</span></div>
+        <div class="contributors__item"><a href="https://x.com/weboftrees/status/2034268464374788169" target="_blank" rel="noopener">Anders Elowsson</a> <span>— Ethereum Foundation</span></div>
+        <div class="contributors__item">Andrew Ashikhmin<span> — Erigon</span></div>
+        <div class="contributors__item"><a href="https://x.com/acaravello/status/2054777974449115264" target="_blank" rel="noopener">Anthony Caravello</a> <span>— Shutter Network</span></div>
+        <div class="contributors__item">Andrei Lapets<span> — Nillion</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2047356034964926772" target="_blank" rel="noopener">Auryn Macmillan</a> <span>— Gnosis Guild &amp; The Interfold</span></div>
+        <div class="contributors__item"><a href="https://farcaster.xyz/bbroad/0x91b9345a" target="_blank" rel="noopener">Ben Broad</a> <span>— EVMavericks</span></div>
+        <div class="contributors__item">Benjamin Hunter<span> — BTCS</span></div>
+        <div class="contributors__item">Brian Adams<span> — Eureka</span></div>
+        <div class="contributors__item">Bryant Soorkia<span> — Gnosis Guild &amp; The Interfold</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2048872149385932862" target="_blank" rel="noopener">Cotabe Moral</a> <span>— Giveth &amp; TheDAO</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2021147866027442644" target="_blank" rel="noopener">Crypto Goblin</a> <span>— Weaving Web3</span></div>
+        <div class="contributors__item">eccogrinder<span> — Gnosis Guild &amp; The Interfold</span></div>
+        <div class="contributors__item"><a href="https://cointelegraph.com/research/eip-8105-a-new-design-for-ethereums-encrypted-mempool" target="_blank" rel="noopener">Gleb Krivosheev</a> <span>— Web3 Journalist</span></div>
+        <div class="contributors__item">Gottfried Herold<span> — Ethereum Foundation</span></div>
+        <div class="contributors__item">Greystroke</div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2043656202161172546" target="_blank" rel="noopener">Griff Green</a> <span>— Giveth &amp; TheDAO</span></div>
+        <div class="contributors__item">Heiko Franssen<span> — brainbot</span></div>
+        <div class="contributors__item">Ivey<span> — SEEDGov</span></div>
+        <div class="contributors__item"><a href="https://ethereum-magicians.org/t/hegota-headliner-proposal-eip-8105-universal-enshrined-encrypted-mempool-eem/27448" target="_blank" rel="noopener">Jannik Luhn</a> <span>— Shutter Network</span></div>
+        <div class="contributors__item">jensei<span> — Web3Privacy</span></div>
+        <div class="contributors__item"><a href="https://x.com/ethdaily/status/2065100648706925007" target="_blank" rel="noopener">Joe</a> <span>— EthDaily</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2013932133111222304" target="_blank" rel="noopener">Josh Dávila</a> <span>— The Blockchain Socialist</span></div>
+        <div class="contributors__item"><a href="https://x.com/ProDJKC/status/2065078992487542943" target="_blank" rel="noopener">JT Nichols</a> <span>— EVMavericks</span></div>
+        <div class="contributors__item"><a href="https://x.com/_julianma/status/2032067843635007508" target="_blank" rel="noopener">Julian Ma</a> <span>— Eth Labs</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2024543383445000249" target="_blank" rel="noopener">Justin Florentine</a> <span>— Besu</span></div>
+        <div class="contributors__item">Konrad<span> — Shutter Network</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/1992907186176147902" target="_blank" rel="noopener">Ke, Bryan, Zheng</a> <span>— ShipAI.ca</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/1991802427499319543" target="_blank" rel="noopener">Loring Harkness</a> <span>— Shutter Network</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/1998050711226220690" target="_blank" rel="noopener">Luis Bezzenberger</a> <span>— Shutter Network</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/1996173315933909127" target="_blank" rel="noopener">Marc Harvey-Hill</a> <span>— Nethermind</span></div>
+        <div class="contributors__item">Marc Holt<span> — Erigon</span></div>
+        <div class="contributors__item">Marc Vlad<span> — DeFiScan</span></div>
+        <div class="contributors__item">Mashal Waqar<span> — Octant</span></div>
+        <div class="contributors__item">Mercy Boma</div>
+        <div class="contributors__item">Miguel de Vega<span> — Nillion</span></div>
+        <div class="contributors__item">Milen Filatov<span> — Erigon</span></div>
+        <div class="contributors__item"><a href="https://x.com/divine_comedian" target="_blank" rel="noopener">Mitch (divinecomedian.eth)</a></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2001576216453841006" target="_blank" rel="noopener">Murat Akdeniz</a> <span>— Primev</span></div>
+        <div class="contributors__item">Mykola Siusko<span> — Web3Privacy</span></div>
+        <div class="contributors__item">namic</div>
+        <div class="contributors__item"><a href="https://x.com/Pememoni/status/2020143930008879263" target="_blank" rel="noopener">Peyman Momeni</a> <span>— Fairblock</span></div>
+        <div class="contributors__item"><a href="https://x.com/polymutex/status/2066883540495519924" target="_blank" rel="noopener">polymutex</a> <span>— Walletbeat</span></div>
+        <div class="contributors__item">Pooja Ranjan<span> — ECH Institute &amp; EtherWorld</span></div>
+        <div class="contributors__item">Punit Jain<span> — Shutter Network</span></div>
+        <div class="contributors__item">Sham<span> — Nillion</span></div>
+        <div class="contributors__item"><a href="https://x.com/ShutterNetwork/status/2067217292157657207" target="_blank" rel="noopener">Tino</a> <span>— SEEDGov</span></div>
+        <div class="contributors__item">Ulrich Petri<span> — Shutter Network</span></div>
+        <div class="contributors__item">Yousra Lembachar<span> — Shutter Network</span></div>
+        <div class="contributors__item">Zeugh<span> — Anticapture</span></div>
+      </div>
+    </div>
+
+    <!-- TWEET CAROUSELS -->
+    <div class="tweets">
+      <!-- Row A: forward -->
+      <div class="tweets__row">
+        <div class="tweets__track tweets__track--fwd">
+          <!-- Set A -->
+          <a href="https://x.com/ShutterNetwork/status/1991802427499319543" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1991802427499319543.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [01]&#10;&#10;@LoringHarkness - why now is the perfect time to start thinking about encrypted mempools on Ethereum mainnet</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1991802427499319543.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/1996173315933909127" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1996173315933909127.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [03]&#10;&#10;@marchhill1 from @Nethermind - why FOCIL and encrypted mempools would be a powerful combination for censorship resistance 💪</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1996173315933909127.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2001576216453841006" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2001576216453841006.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [05]&#10;&#10;@MuratLite founder of @primev_xyz - shares how the Primev x Shutter partnership is creating a new way of getting onchain, which is entirely private 🔒</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2001576216453841006.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2021147866027442644" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2021147866027442644.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [08]&#10;&#10;@Crypto_Goblinz - calls for security and order in the Ethereum galaxy by encrypting the mempool&#10;&#10;Let's do it for the normies and everybody else</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2021147866027442644.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2043656202161172546" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2043656202161172546.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [11]&#10;&#10;@griffgreen knows that crypto is an adversarial environment and that encrypted mempools make crypto more usable for normal people</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2043656202161172546.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2048872149385932862" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2048872149385932862.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [13]&#10;&#10;@Cotabe_M is bullish on encrypted mempools 🔥&#10;&#10;They are the key to stopping the sandwich attacks plaguing Ethereum and finally restoring fairness for users</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2048872149385932862.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2067217292157657207" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2067217292157657207.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [14]&#10;&#10;Encrypt the Mempool! Coalition member @Cryp_tino (@SEEDGov) explains the visibility problem on Ethereum's unencrypted public mempool and shares difference between good and bad MEV</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2067217292157657207.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/acaravello/status/2054777974449115264" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2054777974449115264.jpg" alt=""><div><div class="tweet-card__author">Anthony Caravello</div><div class="tweet-card__handle">@acaravello</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">What did we learn the past 2 months about toxic MEV?&#10;&#10;1. you can still be attacked using MEV protection&#10;2. your transactions could still be leaked&#10;3. other chains are racing to encrypt their mempools&#10;&#10;It's time we end toxic MEV on Ethereum&#10;Encrypt the mempool!</div>
+          </a>
+          <a href="https://x.com/_julianma/status/2032067843635007508" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2032067843635007508.jpg" alt=""><div><div class="tweet-card__author">Julian</div><div class="tweet-card__handle">@_julianma</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Ethereum needs an Encrypted Mempool and it needs it fast.&#10;&#10;It's not just about stopping sandwiching. Encrypted mempools are how Ethereum matures its onchain markets.&#10;&#10;I just published a post on why Ethereum needs encrypted mempools. Here are the core arguments:</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">@_julianma · Article</div>
+                <div class="tweet-card__link-preview-title">Why Ethereum Needs an Encrypted Mempool — and the core arguments for it</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/polymutex/status/2066883540495519924" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2066883540495519924.jpg" alt=""><div><div class="tweet-card__author">polymutex 🌸</div><div class="tweet-card__handle">@polymutex</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Speaking about encrypted mempools now.&#10;x.com/i/spaces/1qJDzzALYRDKV</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">X Space · Live Audio</div>
+                <div class="tweet-card__link-preview-title">Encrypted Mempools — Discussion Space on X</div>
+              </div>
+            </div>
+          </a>
+          <!-- Duplicate set A for seamless loop -->
+          <a href="https://x.com/ShutterNetwork/status/1991802427499319543" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1991802427499319543.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [01]&#10;&#10;@LoringHarkness - why now is the perfect time to start thinking about encrypted mempools on Ethereum mainnet</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1991802427499319543.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/1996173315933909127" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1996173315933909127.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [03]&#10;&#10;@marchhill1 from @Nethermind - why FOCIL and encrypted mempools would be a powerful combination for censorship resistance 💪</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1996173315933909127.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2001576216453841006" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2001576216453841006.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [05]&#10;&#10;@MuratLite founder of @primev_xyz - shares how the Primev x Shutter partnership is creating a new way of getting onchain, which is entirely private 🔒</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2001576216453841006.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2021147866027442644" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2021147866027442644.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [08]&#10;&#10;@Crypto_Goblinz - calls for security and order in the Ethereum galaxy by encrypting the mempool&#10;&#10;Let's do it for the normies and everybody else</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2021147866027442644.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2043656202161172546" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2043656202161172546.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [11]&#10;&#10;@griffgreen knows that crypto is an adversarial environment and that encrypted mempools make crypto more usable for normal people</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2043656202161172546.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2048872149385932862" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2048872149385932862.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [13]&#10;&#10;@Cotabe_M is bullish on encrypted mempools 🔥&#10;&#10;They are the key to stopping the sandwich attacks plaguing Ethereum and finally restoring fairness for users</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2048872149385932862.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2067217292157657207" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2067217292157657207.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [14]&#10;&#10;Encrypt the Mempool! Coalition member @Cryp_tino (@SEEDGov) explains the visibility problem on Ethereum's unencrypted public mempool and shares difference between good and bad MEV</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2067217292157657207.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/acaravello/status/2054777974449115264" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2054777974449115264.jpg" alt=""><div><div class="tweet-card__author">Anthony Caravello</div><div class="tweet-card__handle">@acaravello</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">What did we learn the past 2 months about toxic MEV?&#10;&#10;1. you can still be attacked using MEV protection&#10;2. your transactions could still be leaked&#10;3. other chains are racing to encrypt their mempools&#10;&#10;It's time we end toxic MEV on Ethereum&#10;Encrypt the mempool!</div>
+          </a>
+          <a href="https://x.com/_julianma/status/2032067843635007508" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2032067843635007508.jpg" alt=""><div><div class="tweet-card__author">Julian</div><div class="tweet-card__handle">@_julianma</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Ethereum needs an Encrypted Mempool and it needs it fast.&#10;&#10;It's not just about stopping sandwiching. Encrypted mempools are how Ethereum matures its onchain markets.&#10;&#10;I just published a post on why Ethereum needs encrypted mempools. Here are the core arguments:</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">@_julianma · Article</div>
+                <div class="tweet-card__link-preview-title">Why Ethereum Needs an Encrypted Mempool — and the core arguments for it</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/polymutex/status/2066883540495519924" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2066883540495519924.jpg" alt=""><div><div class="tweet-card__author">polymutex 🌸</div><div class="tweet-card__handle">@polymutex</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Speaking about encrypted mempools now.&#10;x.com/i/spaces/1qJDzzALYRDKV</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">X Space · Live Audio</div>
+                <div class="tweet-card__link-preview-title">Encrypted Mempools — Discussion Space on X</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row B: reverse -->
+      <div class="tweets__row">
+        <div class="tweets__track tweets__track--rev">
+          <!-- Set B -->
+          <a href="https://x.com/ShutterNetwork/status/1992907186176147902" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1992907186176147902.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [02]&#10;&#10;@BryanzkEth from @EigenPhi - why encrypted mempools are the real fix to stopping front runners and sandwich attackers</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1992907186176147902.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/1998050711226220690" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1998050711226220690.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [04]&#10;&#10;@bezzenberger - some people think builders oppose encrypted mempools because it reduces their MEV income 👉 that's actually false&#10;&#10;Here's what builders really think</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1998050711226220690.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2013932133111222304" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2013932133111222304.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [07]&#10;&#10;@TBSocialist - shares why he's supportive of an encrypted mempool on Ethereum and what it could bring to the ecosystem</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2013932133111222304.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2024543383445000249" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2024543383445000249.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [09]&#10;&#10;@robocopsgonemad shares what often gets missed in discussions - adding an encrypted mempool to Ethereum is an opportunity for a real paradigm shift&#10;&#10;It enables something the digital world has never achieved before: fair markets without intermediaries</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2024543383445000249.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2047356034964926772" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2047356034964926772.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [12]&#10;&#10;@auryn_macmillan - encrypted mempools are a critical missing component of a complete economic system on Ethereum</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2047356034964926772.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ethdaily/status/2065100648706925007" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2065100648706925007.jpg" alt=""><div><div class="tweet-card__author">ethdaily.eth</div><div class="tweet-card__handle">@ethdaily</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">We're proud to join the new Encrypt the Mempool Coalition!&#10;&#10;Alongside industry leaders, we're pushing to integrate an EIP to encrypt the mempool in Ethereum's I* Hardfork - to stop toxic MEV &amp; real-time censorship in a decentralized &amp; credibly neutral way.&#10;&#10;Join the coalition 👇</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2065100648706925007.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/weboftrees/status/2034268464374788169" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2034268464374788169.jpg" alt=""><div><div class="tweet-card__author">Anders Elowsson 🌻</div><div class="tweet-card__handle">@weboftrees</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">The full LUCID encrypted mempool EIP-8184 is now up! LUCID is a public encrypted mempool for commit-before-reveal inclusion of MEV-sensitive transactions, without enshrining a specific encryption scheme. With coauthors @_julianma and @robocopsgonemad&#10;&#10;ethereum-magicians.org/t/eip-8184-lucid-encrypted-mempool/28017</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">ethereum-magicians.org</div>
+                <div class="tweet-card__link-preview-title">EIP-8184: LUCID — Universal Encrypted Mempool for commit-before-reveal inclusion of MEV-sensitive transactions</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/ProDJKC/status/2065078992487542943" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2065078992487542943.jpg" alt=""><div><div class="tweet-card__author">⟠ JT Nichol 🦇🔊</div><div class="tweet-card__handle">@ProDJKC</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Encrypt the Mempool.  encryptedmempool.org</div>
+            <div class="tweet-card__link-preview">
+              <img class="tweet-card__link-preview-img" src="assets/xposts/og-encryptedmempool.png" alt="Encrypt the Mempool">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">encryptedmempool.org</div>
+                <div class="tweet-card__link-preview-title">Encrypt the Mempool! Join the coalition to protect Ethereum users.</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/Pememoni/status/2020143930008879263" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2020143930008879263.jpg" alt=""><div><div class="tweet-card__author">Pie Man</div><div class="tweet-card__handle">@Pememoni</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">EIP-8105 is a necessary step for Ethereum to meaningfully address pre-execution info leakage. It enables censorship resistance and plausible deniability for block proposers by protecting tx contents, while also mitigating exploitative strategies.&#10;&#10;ethresear.ch/t/universal-enshrined-encrypted-mempool-eip/23685</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">ethresear.ch</div>
+                <div class="tweet-card__link-preview-title">Universal Enshrined Encrypted Mempool EIP — Ethereum Research</div>
+              </div>
+            </div>
+          </a>
+          <!-- Duplicate set B for seamless loop -->
+          <a href="https://x.com/ShutterNetwork/status/1992907186176147902" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1992907186176147902.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [02]&#10;&#10;@BryanzkEth from @EigenPhi - why encrypted mempools are the real fix to stopping front runners and sandwich attackers</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1992907186176147902.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/1998050711226220690" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-1998050711226220690.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [04]&#10;&#10;@bezzenberger - some people think builders oppose encrypted mempools because it reduces their MEV income 👉 that's actually false&#10;&#10;Here's what builders really think</div>
+            <div class="tweet-card__img"><img src="assets/xposts/1998050711226220690.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2013932133111222304" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2013932133111222304.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the mempool [07]&#10;&#10;@TBSocialist - shares why he's supportive of an encrypted mempool on Ethereum and what it could bring to the ecosystem</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2013932133111222304.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2024543383445000249" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2024543383445000249.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [09]&#10;&#10;@robocopsgonemad shares what often gets missed in discussions - adding an encrypted mempool to Ethereum is an opportunity for a real paradigm shift&#10;&#10;It enables something the digital world has never achieved before: fair markets without intermediaries</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2024543383445000249.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ShutterNetwork/status/2047356034964926772" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2047356034964926772.jpg" alt=""><div><div class="tweet-card__author">Shutter 🛡️⚔️</div><div class="tweet-card__handle">@ShutterNetwork</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Voices from the Mempool [12]&#10;&#10;@auryn_macmillan - encrypted mempools are a critical missing component of a complete economic system on Ethereum</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2047356034964926772.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/ethdaily/status/2065100648706925007" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2065100648706925007.jpg" alt=""><div><div class="tweet-card__author">ethdaily.eth</div><div class="tweet-card__handle">@ethdaily</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">We're proud to join the new Encrypt the Mempool Coalition!&#10;&#10;Alongside industry leaders, we're pushing to integrate an EIP to encrypt the mempool in Ethereum's I* Hardfork - to stop toxic MEV &amp; real-time censorship in a decentralized &amp; credibly neutral way.&#10;&#10;Join the coalition 👇</div>
+            <div class="tweet-card__img"><img src="assets/xposts/2065100648706925007.jpg" alt=""></div>
+          </a>
+          <a href="https://x.com/weboftrees/status/2034268464374788169" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2034268464374788169.jpg" alt=""><div><div class="tweet-card__author">Anders Elowsson 🌻</div><div class="tweet-card__handle">@weboftrees</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">The full LUCID encrypted mempool EIP-8184 is now up! LUCID is a public encrypted mempool for commit-before-reveal inclusion of MEV-sensitive transactions, without enshrining a specific encryption scheme. With coauthors @_julianma and @robocopsgonemad&#10;&#10;ethereum-magicians.org/t/eip-8184-lucid-encrypted-mempool/28017</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">ethereum-magicians.org</div>
+                <div class="tweet-card__link-preview-title">EIP-8184: LUCID — Universal Encrypted Mempool for commit-before-reveal inclusion of MEV-sensitive transactions</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/ProDJKC/status/2065078992487542943" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2065078992487542943.jpg" alt=""><div><div class="tweet-card__author">⟠ JT Nichol 🦇🔊</div><div class="tweet-card__handle">@ProDJKC</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">Encrypt the Mempool.  encryptedmempool.org</div>
+            <div class="tweet-card__link-preview">
+              <img class="tweet-card__link-preview-img" src="assets/xposts/og-encryptedmempool.png" alt="Encrypt the Mempool">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">encryptedmempool.org</div>
+                <div class="tweet-card__link-preview-title">Encrypt the Mempool! Join the coalition to protect Ethereum users.</div>
+              </div>
+            </div>
+          </a>
+          <a href="https://x.com/Pememoni/status/2020143930008879263" class="tweet-card" target="_blank" rel="noopener">
+            <div class="tweet-card__header"><img class="tweet-card__av" src="assets/xposts/av-2020143930008879263.jpg" alt=""><div><div class="tweet-card__author">Pie Man</div><div class="tweet-card__handle">@Pememoni</div></div><span class="tweet-card__view">View on X ↗</span></div>
+            <div class="tweet-card__text">EIP-8105 is a necessary step for Ethereum to meaningfully address pre-execution info leakage. It enables censorship resistance and plausible deniability for block proposers by protecting tx contents, while also mitigating exploitative strategies.&#10;&#10;ethresear.ch/t/universal-enshrined-encrypted-mempool-eip/23685</div>
+            <div class="tweet-card__link-preview">
+              <div class="tweet-card__link-preview-body">
+                <div class="tweet-card__link-preview-domain">ethresear.ch</div>
+                <div class="tweet-card__link-preview-title">Universal Enshrined Encrypted Mempool EIP — Ethereum Research</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ + RESOURCES + NEWS -->
+<section class="bottom" id="faq">
+  <div class="bottom__inner">
+    <div>
+      <h2 class="bottom__section-title">FAQ</h2>
+      <div class="faq__item">
+        <button class="faq__trigger">What is the Encrypt the Mempool! Coalition?<span class="faq__sym">+</span></button>
+        <div class="faq__body">
+          <p>The Encrypt the Mempool! Coalition is a community effort to protect Ethereum users from front running, sandwich attacks, and real-time censorship. Together with Ethereum client teams, developers and researchers, infrastructure teams, wallets and community members, we are pushing for one clear goal: Encrypt Ethereum's public mempool in the upcoming I* hardfork.</p>
+          <p>Coalition members help raise awareness, build public support, and push forward the case for an encrypted mempool on Ethereum.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__trigger">What progress is being made on an encrypted mempool for Ethereum?<span class="faq__sym">+</span></button>
+        <div class="faq__body">
+          <p>For months, contributors across the Ethereum ecosystem have been working toward an EIP for an encrypted mempool on Ethereum. An EIP, or Ethereum Improvement Proposal, is how Ethereum contributors propose changes to the protocol.</p>
+          <p>LUCID is one earlier EIP proposal that has helped shape the discussion, but it is not necessarily the final design. The current work is focused on refining the approach, making improvements to execution quality, and preparing an EIP for submission ahead of Ethereum's upcoming I* hardfork.</p>
+          <p>Technical working groups are actively discussing the design so Ethereum has a credible path toward protocol-level mempool encryption.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__trigger">Is an encrypted mempool the same thing as a private mempool?<span class="faq__sym">+</span></button>
+        <div class="faq__body">
+          <p>Nope! Private mempools, commonly used via private RPCs, are a popular way Ethereum users protect themselves against malicious MEV. But they still rely on a small group of operators who can see your transaction and must be trusted not to attack it. That visibility creates a real point of failure.</p>
+          <p>By contrast, encrypted mempools keep transactions hidden from everyone. No operator, partner, future sequencer, or infrastructure provider can see transactions until it's confirmed.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__trigger">How viable are encrypted mempools?<span class="faq__sym">+</span></button>
+        <div class="faq__body">
+          <p>Encrypted mempools have been researched for years and tested across both experimental and live deployments.</p>
+          <p>A live encrypted mempool on Gnosis Chain has processed thousands of encrypted transactions with support from Nethermind and Erigon validators, proving the model works in production. Shutterized Beacon Chain research demonstrated how encrypted ordering can integrate safely with Ethereum consensus. Deployment on the Sepholia OP Stack testnet validated encrypted flows in an L2 environment. An upcoming proof of concept with Primev brings encrypted ordering into Ethereum's out of protocol transaction supply chain PBS.</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="bottom__section-title">Resources ↗</h2>
+      <a href="https://eips.ethereum.org/EIPS/eip-8184" class="resource-link" target="_blank" rel="noopener">LUCID EIP <span>↗</span></a>
+      <a href="https://docs.google.com/document/d/1bfXeDQyyG5uaBYpK2eB_LrT-148ZDDjmTO3_Y1Tq0Mo/edit?usp=sharing" class="resource-link" target="_blank" rel="noopener">LUCID EIP FAQs <span>↗</span></a>
+      <a href="https://www.youtube.com/watch?v=0dr8gf-yMl0&list=PLJqWcTqh_zKH6BWQNJBTsIispobvV7pa4" class="resource-link" target="_blank" rel="noopener">Tech Working Group Recordings <span>↗</span></a>
+      <a href="https://dune.com/hildobby/sandwiches" class="resource-link" target="_blank" rel="noopener">MEV Sandwich Trades on Dune <span>↗</span></a>
+    </div>
+  </div>
+
+  <div class="news">
+    <h2 class="news__title">News and Updates</h2>
+    <div class="news__list">
+      <a href="https://etherworld.co/ethereum-encrypted-mempool-progress-challenges-the-road-to-hegota/" class="news__item" target="_blank" rel="noopener">Ethereum Encrypted Mempool Progress and Challenges <span class="news__source">EtherWorld ↗</span></a>
+      <a href="https://etherworld.co/ethereum-coalition-pushes-for-encrypted-mempool-in-upcoming-hardfork/" class="news__item" target="_blank" rel="noopener">Ethereum Coalition Pushes for Encrypted Mempool <span class="news__source">EtherWorld ↗</span></a>
+      <div class="news__item">Those calling for an encrypted mempool on Ethereum! <span class="news__source">X</span></div>
+      <div class="news__item">Encrypted mempools for wallet protection <span class="news__source">article</span></div>
+      <div class="news__item">Encrypt the mempool! on Daily Doots <span class="news__source">Daily Doots</span></div>
+      <a href="https://youtu.be/uCt8updE5zs" class="news__item" target="_blank" rel="noopener">MEV Is Broken on Ethereum. Can Encrypted Mempools Fix It? <span class="news__source">YouTube ↗</span></a>
+      <div class="news__item">Encrypted mempool 101 by Ethdaily <span class="news__source">EthDaily</span></div>
+      <div class="news__item">Why Ethereum needs an encrypted mempool <span class="news__source">article</span></div>
+      <div class="news__item">Encrypted mempools on The Daily Gwei <span class="news__source">The Daily Gwei</span></div>
+      <div class="news__item">The first encrypted mempool is coming to PBS on Ethereum <span class="news__source">article</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<footer class="footer-cta">
+  <h2 class="footer-cta__title">Want to get involved?</h2>
+  <div class="footer-cta__btns">
+    <a href="https://x.com/encryptmempool" class="footer-cta__btn-white" target="_blank" rel="noopener">DM US ON X</a>
+    <a href="https://qf.giveth.io/project/encrypt-the-mempool-stopping-toxic-mev-censorship" class="footer-cta__btn-outline" target="_blank" rel="noopener">DONATE ON GIVETH</a>
+  </div>
+  <p class="footer-cta__desc">This website is dedicated to bringing the Ethereum community together to support encrypting Ethereum's public mempool. We invite Ethereum client teams, developers and researchers, infrastructure teams, wallets, and community members to get involved.</p>
+  <p class="footer-cta__credit">Webpage created by <a href="https://brainbot.com/" target="_blank" rel="noopener">brainbot</a>, core contributor for the <a href="https://www.shutter.network/" target="_blank" rel="noopener">Shutter Network</a></p>
+</footer>
+
+<script src="main.js"></script>
+
+<!-- Cookie consent banner -->
+<div id="etm-consent-banner" class="etm-consent-banner" role="dialog" aria-label="Cookie notice" hidden>
+  <div class="etm-consent-banner__inner">
+    <p class="etm-consent-banner__text">
+      This site uses Matomo Analytics. By default, no cookies are set. Accept to allow cookies that recognize you on future visits. <a href="https://shutter.network/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a>
+    </p>
+    <div class="etm-consent-banner__btns">
+      <button id="etm-consent-accept" class="etm-consent-banner__btn etm-consent-banner__btn--accept">Accept</button>
+      <button id="etm-consent-decline" class="etm-consent-banner__btn etm-consent-banner__btn--decline">No thanks</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
