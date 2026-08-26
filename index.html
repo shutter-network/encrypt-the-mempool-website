@@ -29,42 +29,53 @@
 
   <!-- Matomo: cookieless by default, cookies enabled on consent -->
   <script>
-    var _paq = window._paq = window._paq || [];
-    _paq.push(['disableCookies']);
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
     (function() {
-      var u = 'https://shutter.matomo.cloud/';
-      _paq.push(['setTrackerUrl', u + 'matomo.php']);
-      _paq.push(['setSiteId', '10']);
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.async = true; g.src = 'https://cdn.matomo.cloud/shutter.matomo.cloud/matomo.js';
-      s.parentNode.insertBefore(g, s);
-    })();
+      // The dev server, local builds and staging all serve this same markup, so
+      // without a host check every page view during development lands in Matomo.
+      // Allowlist the live hostnames rather than blocking localhost, so anything
+      // unrecognised (a preview URL, a LAN IP, file://) fails closed. The consent
+      // banner is skipped too, since there is nothing to consent to when nothing
+      // is tracked.
+      var TRACKED_HOSTS = ['encryptedmempool.org', 'www.encryptedmempool.org'];
+      if (TRACKED_HOSTS.indexOf(location.hostname) === -1) return;
 
-    (function() {
-      var CONSENT_KEY = 'etm_analytics_consent';
-      var consent = localStorage.getItem(CONSENT_KEY);
-      if (consent === 'accepted') {
-        _paq.push(['rememberCookieConsentGiven']);
-      }
-      document.addEventListener('DOMContentLoaded', function() {
-        var banner = document.getElementById('etm-consent-banner');
-        var acceptBtn = document.getElementById('etm-consent-accept');
-        var declineBtn = document.getElementById('etm-consent-decline');
-        if (consent === null) {
-          banner.removeAttribute('hidden');
-        }
-        acceptBtn.addEventListener('click', function() {
-          localStorage.setItem(CONSENT_KEY, 'accepted');
-          banner.setAttribute('hidden', '');
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['disableCookies']);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function() {
+        var u = 'https://shutter.matomo.cloud/';
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', '10']);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.async = true; g.src = 'https://cdn.matomo.cloud/shutter.matomo.cloud/matomo.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+
+      (function() {
+        var CONSENT_KEY = 'etm_analytics_consent';
+        var consent = localStorage.getItem(CONSENT_KEY);
+        if (consent === 'accepted') {
           _paq.push(['rememberCookieConsentGiven']);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          var banner = document.getElementById('etm-consent-banner');
+          var acceptBtn = document.getElementById('etm-consent-accept');
+          var declineBtn = document.getElementById('etm-consent-decline');
+          if (consent === null) {
+            banner.removeAttribute('hidden');
+          }
+          acceptBtn.addEventListener('click', function() {
+            localStorage.setItem(CONSENT_KEY, 'accepted');
+            banner.setAttribute('hidden', '');
+            _paq.push(['rememberCookieConsentGiven']);
+          });
+          declineBtn.addEventListener('click', function() {
+            localStorage.setItem(CONSENT_KEY, 'declined');
+            banner.setAttribute('hidden', '');
+          });
         });
-        declineBtn.addEventListener('click', function() {
-          localStorage.setItem(CONSENT_KEY, 'declined');
-          banner.setAttribute('hidden', '');
-        });
-      });
+      })();
     })();
   </script>
   <!-- End Matomo Code -->
