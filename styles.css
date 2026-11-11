@@ -74,6 +74,20 @@ a { color: var(--blue); }
 .btn--outline:hover { background: rgba(255,255,255,.1); }
 .btn--blue { background: var(--yellow); color: var(--dark); font-size: 13px; padding: 13px 16px; }
 
+/* ---- ANNOUNCEMENT BAR ---- */
+.announce {
+  display: block;
+  background: var(--yellow);
+  color: var(--dark);
+  text-align: center;
+  text-decoration: none;
+  font: 500 16px/1.4 var(--font);
+  padding: 13px 16px;
+}
+.announce strong { font-weight: 800; }
+.announce__more { font-weight: 800; text-decoration: underline; text-underline-offset: 3px; margin-left: 10px; white-space: nowrap; }
+.announce:hover .announce__more { text-decoration-thickness: 2px; }
+
 /* ---- HERO ---- */
 .hero {
   background: var(--blue);
