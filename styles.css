@@ -74,19 +74,22 @@ a { color: var(--blue); }
 .btn--outline:hover { background: rgba(255,255,255,.1); }
 .btn--blue { background: var(--yellow); color: var(--dark); font-size: 13px; padding: 13px 16px; }
 
-/* ---- ANNOUNCEMENT BAR ---- */
-.announce {
-  display: block;
-  background: var(--yellow);
-  color: var(--dark);
-  text-align: center;
-  text-decoration: none;
-  font: 500 16px/1.4 var(--font);
-  padding: 13px 16px;
+/* ---- ANNOUNCEMENT BAR (matches the shutter.network banner) ---- */
+.announce { display: block; background: var(--yellow); color: var(--dark); text-decoration: none; height: 60px; overflow: hidden; }
+.announce__inner { display: flex; justify-content: space-between; align-items: center; height: 100%; max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.announce__left { display: flex; align-items: center; gap: 12px; height: 100%; min-width: 0; }
+.announce__img { display: flex; align-items: center; justify-content: center; height: 60px; overflow: hidden; flex: none; }
+.announce__img img { width: 108px; height: 108px; max-width: none; }
+.announce__text { font: 600 28px/.95 var(--font); letter-spacing: -.02em; }
+.announce__more { display: flex; align-items: center; gap: 10px; font: 600 28px/.95 var(--font); letter-spacing: -.02em; flex: none; margin-left: 16px; }
+.announce__more svg { width: 16px; }
+.announce:hover .announce__more { opacity: .75; }
+@media (max-width: 900px) {
+  .announce__inner { padding: 0 16px; }
+  .announce__text { font-size: 18px; }
+  .announce__more { font-size: 0; gap: 0; margin-left: 8px; }
+  .announce__img img { width: 80px; height: 80px; }
 }
-.announce strong { font-weight: 800; }
-.announce__more { font-weight: 800; text-decoration: underline; text-underline-offset: 3px; margin-left: 10px; white-space: nowrap; }
-.announce:hover .announce__more { text-decoration-thickness: 2px; }
 
 /* ---- HERO ---- */
 .hero {
